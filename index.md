@@ -1,12 +1,10 @@
-## Welcome to GitHub Pages
+## Human Tendencies
 
-You can use the [editor on GitHub](https://github.com/HumanTendencies/Human-Tendencies/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+Robot Leader commands you
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### About
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Stay fresh
 
 ```markdown
 Syntax highlighted code block
