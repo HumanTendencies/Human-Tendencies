@@ -1,0 +1,309 @@
+<head>
+
+<style media="screen" type="text/css">
+
+:root {
+  --color_luchador: #dcdcdc;
+  --color_outline: #b5b5b4;
+  --color_txt: black;
+  --color_base: #e7515d;
+  --color_accent: #b64861;
+  --color_base: white;
+  --color_accent: #FBCA02;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  min-width: 20rem;
+  background-color: var(--color_base);
+  text-align: center;
+}
+
+::-webkit-input-placeholder {
+  color: var(--color_base);
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: var(--color_base);
+  opacity: 1;
+}
+
+::-ms-input-placeholder {
+  color: var(--color_base);
+  opacity: 1;
+}
+
+::placeholder {
+  color: var(--color_base);
+  opacity: 1;
+}
+
+.u-inline {
+  display: inline-block;
+}
+
+.u-relative {
+  position: relative;
+}
+
+.u-uppercase {
+  text-transform: uppercase;
+}
+
+.luchador {
+  width: 120px;
+  height: 120px;
+  background-color: var(--color_luchador);
+  border-radius: 5%;
+  cursor: pointer;
+  margin-top: 15px;
+  overflow: hidden;
+}
+.luchador > *,
+.luchador + .c-emoji {
+  pointer-events: none;
+}
+.luchador__forehead {
+  width: 100%;
+  height: 20px;
+  border-bottom: 2px solid var(--color_outline);
+}
+.luchador:hover .luchador__forehead {
+  height: 17px;
+}
+.luchador__eye {
+  width: 30px;
+  height: 30px;
+  background-color: var(--color_base);
+  border: 5px solid var(--color_outline);
+  position: absolute;
+  top: 35px;
+}
+
+.luchador:hover .luchador__eye {
+  background-color: var(--color_accent);
+  top: 33px;
+}
+.luchador__eye:not(.luchador__eye--mirror) {
+  left: 15px;
+}
+.luchador__eye--mirror {
+  right: 15px;
+ 
+}
+.luchador__nose {
+  width: 20px;
+  height: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: var(--color_base);
+  display: block;
+  margin: 45px auto 0;
+}
+.luchador:hover .luchador__nose {
+  margin-top: 42px;
+}
+.luchador__mouth {
+  width: 43px;
+  height: 21px;
+  background-color: var(--color_base);
+  border-radius: 8px;
+  border: 5px solid var(--color_outline);
+  margin-top: 9px;
+  -webkit-transition: all 0.05s linear;
+  transition: all 0.05s linear;
+  z-index: 10;
+}
+.luchador:hover .luchador__mouth {
+  width: 40px;
+  height: 24px;
+  background-color: var(--color_accent);
+  margin-top: 3px;
+}
+
+.c-emoji {
+  font-size: 30px;
+  font-weight: normal;
+  display: block;
+  -webkit-transition: all 1s linear, opacity 0.01s linear;
+  transition: all 1s linear, opacity 0.01s linear;
+  opacity: 0;
+  z-index: 20;
+}
+.luchador:hover + .c-emoji {
+  opacity: 1;
+  -webkit-transform: translateY(-200px);
+          transform: translateY(-200px);
+}
+
+.c-form {
+  max-width: 40.625rem;
+  width: 90%;
+  font-family: garamond;
+  color: var(--color_txt);
+  margin-top: 12px;
+}
+.c-form__fieldset {
+  border-color: black;
+  border-radius: 5px;
+}
+.c-form__title {
+  font-size: 3.125rem;
+  font-weight: 900;
+  letter-spacing: 5px;
+  line-height: 1;
+}
+@media (min-width: 40.625rem) {
+  .c-form__title {
+    font-size: 4.6875rem;
+  }
+}
+
+.c-field {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
+}
+@media (min-width: 40.625rem) {
+  .c-field {
+    width: 70%;
+  }
+}
+.c-field__label {
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 600;
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+  margin-bottom: 10px;
+  padding-left: 3%;
+  text-align: left;
+  opacity: 0;
+}
+.c-field__input, .c-field__textarea {
+  width: 100%;
+  height: 50px;
+  border: 0;
+  border-radius: 3px;
+  color: var(--color_base);
+  background-color: black;
+  font-size: 0.8125rem;
+  font-weight: 800;
+  padding: 3%;
+  -webkit-transition: background 0.15s ease-in-out;
+  transition: background 0.15s ease-in-out;
+}
+.c-field__input:focus, .c-field__textarea:focus {
+  color: var(--color_txt);
+  background-color: var(--color_accent);
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  outline: 0;
+}
+.c-field__input:focus::-webkit-input-placeholder, .c-field__textarea:focus::-webkit-input-placeholder {
+  color: var(--color_accent);
+  visibility: hidden;
+}
+.c-field__input:focus:-ms-input-placeholder, .c-field__textarea:focus:-ms-input-placeholder {
+  color: var(--color_accent);
+  visibility: hidden;
+}
+.c-field__input:focus::-ms-input-placeholder, .c-field__textarea:focus::-ms-input-placeholder {
+  color: var(--color_accent);
+  visibility: hidden;
+}
+.c-field__input:focus::placeholder, .c-field__textarea:focus::placeholder {
+  color: var(--color_accent);
+  visibility: hidden;
+}
+.c-field__input:focus + .c-field__label, .c-field__textarea:focus + .c-field__label {
+  margin-top: 20px;
+  opacity: 1;
+}
+.c-field__textarea {
+  height: auto;
+  margin-bottom: 20px;
+  resize: none;
+}
+
+.c-btn {
+  width: 100%;
+  height: 50px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 3px;
+  background-color: black;
+  border: 0;
+  color: white;
+  cursor: pointer;
+  font-size: 1.0625rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  outline: 0;
+  -webkit-transition: background 0.15s ease-in-out;
+  transition: background 0.15s ease-in-out;
+}
+.c-btn:focus, .c-btn:hover {
+  background-color: var(--color_luchador);
+  color: var(--color_accent);
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+
+
+</style>
+
+</head>
+
+<body>
+  
+
+<div class="luchador u-inline u-relative">
+  <div class="luchador__forehead"></div>
+  <div class="luchador__eye"></div>
+  <div class="luchador__eye luchador__eye--mirror"></div>
+  <div class="luchador__nose"></div>
+  <div class="luchador__mouth u-inline u-relative"></div>
+</div><span class="c-emoji u-relative"> ⚡️ ⚡️ ⚡️ </span>
+<form class="c-form u-inline" method="post" action="">
+  <fieldset class="c-form__fieldset">
+    <legend class="c-form__title u-uppercase">Ask Luchador</legend>
+    <div class="c-field">
+      <input class="c-field__input" type="text" name="name" placeholder="Name" value="" required="required"/>
+      <label class="c-field__label u-uppercase" for="name">Name</label>
+    </div>
+    <div class="c-field">
+      <input class="c-field__input" type="email" name="email" placeholder="Email" maxlength="255" value="" required="required"/>
+      <label class="c-field__label u-uppercase" for="email">Email</label>
+    </div>
+    <div class="c-field">
+      <input class="c-field__input" type="text" name="subject" placeholder="What's up?" value=""/>
+      <label class="c-field__label u-uppercase" for="subject">Subject</label>
+    </div>
+    <div class="c-field">
+      <textarea class="c-field__textarea" name="msg" rows="6" cols="50" placeholder="Ask me anything!" required="required"></textarea>
+      <label class="c-field__label u-uppercase" for="msg">Message</label>
+    </div>
+    <div class="c-field">
+      <input class="c-btn u-uppercase" type="submit" value="Hit me"/>
+    </div>
+  </fieldset>
+</form>
+</body>
+
