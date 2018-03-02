@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 
+<!DOCTYPE html>
+
 <head style="font-family:garamond">
   <title> Contact | Human Tendencies </title>
 </head>
@@ -36,15 +38,36 @@
   <nav>
 
   <div>
-    <h2> Location </h2>
+    <h3> Location </h3>
     <p> Paradise. </p>
   </div>
   
     
   <div>
-    <h2> Email </h2>
+    <h3> Email </h3>
     <p>humantendenciesco@gmail.com<p> 
   </div>
-      
   
+<br/>
+      
+<h3>Question the Robot Leader</h3>
+<form method="post" action="send_mail.php">
+<p>
+<label>First Name
+<input type="text" name="first_name" required>
+</label> 
+</p>
+<p>
+<label>Email 
+<input type="email" name="email_address">
+</label>
+</p>
+<p>
+<label>Comments
+<textarea name="comments" maxlength="500"></textarea>
+</label>
+</p>
+<p><button>Submit the form</button></p>
+</form>
+
 </body>
